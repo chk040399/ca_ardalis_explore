@@ -1,0 +1,30 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path="CleanArchitecture.nuspec" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/ca_ardalis_explore.AspireHost/ca_ardalis_explore.AspireHost.csproj" />
+    <Project Path="src/ca_ardalis_explore.Core/ca_ardalis_explore.Core.csproj" />
+    <Project Path="src/ca_ardalis_explore.Infrastructure/ca_ardalis_explore.Infrastructure.csproj" />
+    <Project Path="src/ca_ardalis_explore.ServiceDefaults/ca_ardalis_explore.ServiceDefaults.csproj" />
+    <Project Path="src/ca_ardalis_explore.UseCases/ca_ardalis_explore.UseCases.csproj" />
+    <Project Path="src/ca_ardalis_explore.Web/ca_ardalis_explore.Web.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/ca_ardalis_explore.FunctionalTests/ca_ardalis_explore.FunctionalTests.csproj">
+      <BuildDependency Project="src/ca_ardalis_explore.Web/ca_ardalis_explore.Web.csproj" />
+    </Project>
+    <Project Path="tests/ca_ardalis_explore.IntegrationTests/ca_ardalis_explore.IntegrationTests.csproj">
+      <BuildDependency Project="src/ca_ardalis_explore.Infrastructure/ca_ardalis_explore.Infrastructure.csproj" />
+    </Project>
+    <Project Path="tests/ca_ardalis_explore.UnitTests/ca_ardalis_explore.UnitTests.csproj" />
+  </Folder>
+</Solution>
